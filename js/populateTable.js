@@ -72,7 +72,7 @@ function addTask(name, money, note, id, transactionId) {
         completedTask(usernameName.textContent, amountName.textContent, noteName.textContent, idName.textContent, transactionIdName.textContent);
         table.deleteRow(addTaskRow.rowIndex);
         completeButton.disabled = true;
-        await updateDB(idName.textContent, "Completed", transactionIdName.textContent);
+        await updateDB(idName.textContent, "COMPLETED", transactionIdName.textContent);
 
     });
     completeButtonCell.appendChild(completeButton);
@@ -85,7 +85,7 @@ function addTask(name, money, note, id, transactionId) {
         failedTask(usernameName.textContent, amountName.textContent, noteName.textContent, idName.textContent, transactionIdName.textContent);
         table.deleteRow(addTaskRow.rowIndex);
         failedButton.disabled = true;
-        await updateDB(idName.textContent, "Failed", transactionIdName.textContent);
+        await updateDB(idName.textContent, "FAILED", transactionIdName.textContent);
     });
     failedButtonCell.appendChild(failedButton);
 }
