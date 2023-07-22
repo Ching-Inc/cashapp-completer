@@ -1,8 +1,7 @@
 let listOfTask;
 
 document.addEventListener('DOMContentLoaded', async function () {
-
-    const response = await fetch('https://chingpay-payment.herokuapp.com/v1/getTasks?forRetry=true', {
+    const response = await fetch('https://chingpay-payment.herokuapp.com/v1/getTasks?forRetry='+"true", {
                 // mode: 'no-cors',
                 method: 'GET',
                     headers: {
